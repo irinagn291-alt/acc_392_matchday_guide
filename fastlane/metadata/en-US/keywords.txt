@@ -1,0 +1,1 @@
+soccer,stadium,matchday,packing,checklist,kickoff,transit,journal,fans,arrival

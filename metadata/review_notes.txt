@@ -1,0 +1,9 @@
+Version 1.4.2 (10427) supports iPhone and iPad on iOS or iPadOS 17.4 or later. The app opens on Guide with Wembley Stadium selected. No sign-in is required. The six default packing items are unchecked, match plans and notes are empty, and weather and match reminders are off.
+
+In Guide, select a stadium, change the highlighted compass direction and expand the orientation sketch. In Matchdays, add a home match with two club names and a future venue-local kick-off. Open the saved plan to check the countdown and calculated arrival time. In Checklist, tick an item or add your own. In Journal, create a titled note and find it using search.
+
+Enable weather in Settings to request data from Bright Sky using bundled stadium coordinates. The app requests no device location. Some screens still name MET Norway. The guide and core planning tools use bundled and local data. The Settings JSON import and export cover notes and favourites. The Privacy & data screen mentions iCloud sync, which is inactive.
+
+Calendar export requests write-only access and creates a separate event. Checklist export requests full Apple Reminders access to copy unfinished items and update linked completion. Enabling match reminders requests permission for alerts, sounds and badges. Notifications are scheduled locally. The core workflows remain available if access is denied.
+
+Widgets read saved data from the shared App Group. To test the local Lock Screen countdown, save a future match within eight hours of kick-off and start a Live Activity from the plan on a supported device. Dynamic Island is available on supported models. End the activity in Settings.
