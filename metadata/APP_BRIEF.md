@@ -1,4 +1,4 @@
-<!-- gf-brief source=47097765654a2723cd373ce0f8b736e4f483820bd5eb12e27e81ea531eabcc69 written=2026-11-19T21:19:19+03:00 -->
+<!-- gf-brief source=47097765654a2723cd373ce0f8b736e4f483820bd5eb12e27e81ea531eabcc69 written=2026-11-19T21:55:34+03:00 -->
 # Matchday Guide
 
 ## What it is
