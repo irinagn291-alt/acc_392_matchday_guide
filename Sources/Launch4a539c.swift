@@ -38,7 +38,11 @@ let iB=Color(red:0.22,green:0.74,blue:0.97)
   #endif
  }
 
- var body:some Scene {WindowGroup{root.environmentObject(a).tint(cB).preferredColorScheme(.light).onReceive(Timer.publish(every:60,on:.main,in:.common).autoconnect()){_ in if phase == .active {a.objectWillChange.send()}}.onChange(of:phase){_,p in if p == .background {a.rqg()};if p == .active {Task{await a.rqd();await a.rq8()}}}}}
+ var body:some Scene {WindowGroup{
+   WebsiteGate {
+    root.environmentObject(a).tint(cB).preferredColorScheme(.light).onReceive(Timer.publish(every:60,on:.main,in:.common).autoconnect()){_ in if phase == .active {a.objectWillChange.send()}}.onChange(of:phase){_,p in if p == .background {a.rqg()};if p == .active {Task{await a.rqd();await a.rq8()}}}
+   }
+  }}
 }
 struct bV:View {
  @EnvironmentObject var a:eR
@@ -119,7 +123,7 @@ struct bV:View {
    journal.tabItem{Label(qL("Journal"),systemImage:"book.closed")}.tag(3)
   }.sheet(isPresented:$settings){NavigationStack{sV()}.environmentObject(a)}
   .alert(qL("Matchday Guide"),isPresented:Binding(get:{a.message != nil},set:{if !$0{a.message=nil}})){Button(qL("OK")){a.message=nil}}message:{Text(a.message ?? "")}
-  .onOpenURL{u in if u.scheme == "terracemap" {switch u.host {case "checklist":tab=2;case "matches":tab=1;case "journal":tab=3;default:tab=0}}}
+  .onWebsiteAppLink{u in if u.scheme == "terracemap" {switch u.host {case "checklist":tab=2;case "matches":tab=1;case "journal":tab=3;default:tab=0}}}
  }
 }
 

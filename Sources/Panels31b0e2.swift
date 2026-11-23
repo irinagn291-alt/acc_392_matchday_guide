@@ -117,7 +117,9 @@ struct sV:View {
   Section(qL("Local notifications")){Text(qL("The next 24 matches are scheduled when you open the app.")).font(.caption);Text(qL("Get a reminder the day before a match and at your planned arrival. Weather notices appear only after an update. Background updates are scheduled by iOS.")).font(.subheadline);if a.s.alerts {Toggle(qL("Match reminders"),isOn:Binding(get:{a.s.alerts},set:{a.s.alerts=$0;a.rq1()}))}else{Button(qL("Enable match reminders")){Task{await a.rq7()}}};Button(qL("End Live Activities")){Task{await a.rqe()}}}
    F7634d(encode: a.prepare7634d, apply: a.accept7634d)
   Section(qL("Favorites")){let fs=a.s.favorites.filter(\.active);if fs.isEmpty{Text(qL("Save stadiums from Guide and clubs from a match plan.")).font(.subheadline).foregroundStyle(.secondary)};ForEach(fs){f in HStack{Label(f.label,systemImage:f.id.hasPrefix("club.") ? "sportscourt":"building.2");Spacer();Button{a.rq5(f.id,f.label)}label:{Image(systemName:"heart.fill")}.accessibilityLabel(qL("Remove favorite"))}}}
-  Section{NavigationLink(qL("Widget previews")){wV()};NavigationLink(qL("Privacy & data")){pV()}}
+  Section{
+   WebsiteContactLink()
+   NavigationLink(qL("Widget previews")){wV()};NavigationLink(qL("Privacy & data")){pV()}}
   Section{Text(qL("Matchday Guide is free. No purchases, advertising or tracking.")).font(.caption);Text("1.4.2 · 10427").font(.caption2).foregroundStyle(.secondary)}
  }.navigationTitle(qL("Settings")).toolbar{ToolbarItem(placement:.confirmationAction){Button(qL("Done")){dismiss()}}}
  }
